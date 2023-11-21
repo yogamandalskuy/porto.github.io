@@ -1,0 +1,484 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ::-webkit-scrollbar-track {
+  background-color: pink;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  height: 10px;
+} */
+
+:root {
+  --primary-color: gold;
+  --secondary-color: #142c50;
+  --primary-font-family: "Petemoss", cursive;
+  --secondary-font-family: "Brawler", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(0deg, rgb(27, 1, 104), #3d065e, #220066);
+  animation: trann 2s ease;
+  /* overflow-y: hidden; */
+}
+
+@keyframes trann {
+  0% {
+    opacity: 25%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* NAV BAR */
+
+nav {
+  background-color: rgba(15, 15, 15, 0.8);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+/* #work a:focus {
+  color: var(--primary-color);
+  text-shadow: 2px 4px 5px rgb(164, 156, 156);
+} */
+
+.nav-logo {
+  font-family: "Petemoss", cursive;
+  font-size: 55px;
+  padding: 40px;
+  padding-right: 57%;
+  justify-content: space-between;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.nav-list {
+  display: flex;
+  /* background-color: antiquewhite; */
+}
+
+.nav-list li {
+  font-size: 23px;
+  list-style: none;
+  padding: 12px 0px;
+}
+
+.nav-list li a:hover {
+  background-color: rgba(208, 208, 208, 0.4);
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 26px 45px;
+}
+
+.nav-logo a:hover,
+.nav-list a:hover {
+  color: var(--primary-color);
+  text-shadow: 1px 3px 5px rgb(181, 181, 181);
+  transition: 0.3s;
+}
+
+/* CONTENT */
+/* PAGE */
+#content {
+  /* margin-top: 0.5%; */
+  display: flex;
+  width: 100%;
+  height: 750px;
+  /* height: 200%; */
+  color: white;
+  /* background-color: antiquewhite; */
+}
+.content-left {
+  /* background-color: aqua; */
+  padding: 12% 8% 40px 8%;
+  line-height: 2.4;
+  font-family: "Brawler", serif;
+  width: 40%;
+  margin-left: 3%;
+  margin-top: 4%;
+}
+
+.text-content-thin1 {
+  font-size: 35px;
+  /* background-color: #bd00ff; */
+  color: var(--primary-color);
+  line-height: 1.8;
+}
+
+.content-left hr {
+  border: 1px solid var(--primary-color);
+  width: 50%;
+}
+.text-content-bold {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.3;
+  padding-bottom: 10px;
+}
+
+.text-content-thin2 {
+  font-size: 20px;
+  line-height: 5;
+}
+
+.button-content {
+  text-decoration: none;
+  background-color: rgba(255, 215, 0, 0);
+  padding: 20px 90px;
+  margin-left: 20%;
+  border-radius: 20px;
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: bold;
+  /* line-height: 4; */
+  border: 2px solid gold;
+}
+
+.button-content:hover {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  /* text-transform: uppercase; */
+  box-shadow: 2px 3px 20px 1px var(--primary-color);
+  background-color: gold;
+  /* text-transform: uppercase; */
+  border: 2px solid rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.content-image {
+  margin-top: 13%;
+  /* background-color: aliceblue; */
+  padding-left: 40px;
+}
+.content-image img {
+  /* border: 3px solid white; */
+  box-shadow: 4px 5px 8px 3px white;
+  border-radius: 50%;
+  float: right;
+  width: 500px;
+  animation: movess 8s infinite;
+}
+
+/* @keyframes movess {
+  50% {
+    rotate: y 180deg;
+    content: url(/Assets/Profile/Gambar2.jpg);
+  }
+} */
+
+.content {
+  animation: gerak 1.5s ease;
+}
+@keyframes gerak {
+  0% {
+    transform: translateX(-80px);
+    opacity: 65%;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* PAGE 2 */
+#page2 {
+  width: 100%;
+  height: 700px;
+  background-color: #ffffff;
+  margin-top: 80px;
+  font-family: var(--secondary-font-family);
+}
+
+.page2_judul {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 35px;
+}
+
+.page2_judul hr {
+  width: 20%;
+  border: 3px solid gold;
+  margin-left: 40%;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+.skill {
+  margin-top: 3%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  margin-bottom: 40%;
+}
+
+.skill img {
+  /* border: 2px solid black; */
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 3px 4px 2px 3px rgb(174, 173, 173);
+}
+
+/* PAGE 3 */
+#page3 {
+  /* background-image: linear-gradient(30deg, #1d1d3d, #142c50, #161f28); */
+  /* margin-top: 1%; */
+  animation: gerak 2s ease;
+  height: 100vh;
+  /* margin-top: -3%; */
+}
+
+@keyframes gerak {
+  0% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.judul h2 {
+  color: var(--primary-color);
+  font-family: "Brawler";
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+  /* margin-top: 6%; */
+  padding-top: 100px;
+}
+
+.judul hr {
+  border: 3px solid white;
+  width: 25%;
+  align-content: center;
+  position: relative;
+  left: 37%;
+  right: 30px;
+  margin-top: 18px;
+  border-radius: 30px;
+}
+
+#porto {
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-between; */
+  margin-top: 4%;
+  font-family: var(--secondary-font-family);
+  color: white;
+}
+
+.content1 h2 {
+  padding: 10px 0;
+}
+.content1 {
+  background-color: rgba(125, 118, 118, 0.2);
+  width: 35%;
+  border: 3px solid white;
+  text-align: center;
+  margin-right: 80px;
+  border-radius: 15px;
+  /* height: 90%; */
+}
+.content1 hr,
+.content2 hr {
+  margin-bottom: 10px;
+  border: 2px solid var(--primary-color);
+  width: 35%;
+  position: relative;
+  left: 32%;
+}
+
+.content2 h2 {
+  padding: 10px 0;
+}
+
+#designerSlideshow,
+#programmerSlideshow {
+  justify-content: center;
+  display: flex;
+}
+.slide {
+  border-radius: 10px;
+}
+
+/* .content1 img,
+  .content2 img {
+    margin-bottom: 20px;
+  } */
+.content2 {
+  background-color: rgba(125, 118, 118, 0.2);
+  width: 35%;
+  border: 3px solid white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.content1 a,
+.content2 a {
+  padding: 5px 30px;
+  /* background-color: pink; */
+  margin: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  border: 3px solid var(--primary-color);
+}
+
+.content1 a:hover,
+.content2 a:hover {
+  background-color: var(--primary-color);
+  color: black;
+  box-shadow: 0px 0px 8px 2px rgb(154, 130, 130);
+  border: 2px solid black;
+  font-family: "Brawler", serif;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.content1 p,
+.content2 p {
+  margin: 30px;
+}
+
+.slideshow-container .slide {
+  display: none;
+}
+
+.slideshow-container .slide:first-child {
+  display: block;
+}
+
+/* SOCIAL MEDIA */
+#page4 {
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  /* background-color: rgba(15, 15, 15, 0.2); */
+}
+.content-text h2 {
+  /* color: white; */
+  font-family: "Brawler", serif;
+  text-align: center;
+  padding-top: 120px;
+  font-size: 40px;
+  line-height: 2;
+}
+
+.content-text hr {
+  width: 24%;
+  position: relative;
+  left: 38%;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+}
+#content-img {
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+}
+.image1,
+.image2,
+.image3,
+.image4 {
+  /* background-color: rgba(125, 118, 118, 0.2); */
+  width: 13%;
+  height: 250px;
+  margin-right: 25px;
+  box-shadow: 3px 4px 2px 3px rgb(174, 173, 173);
+  /* border: 1px solid white; */
+  border-radius: 20px;
+}
+.content-text,
+#content-img {
+  animation: gambar 0.7s ease-in-out;
+}
+
+@keyframes gambar {
+  0% {
+    transform: translateY(100px);
+    opacity: 10%;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.gambar {
+  padding: 30px;
+}
+
+.image1 img,
+.image2 img,
+.image3 img,
+.image4 img {
+  width: 100%;
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover,
+.image4:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gambar a {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(red, green, blue, 0.3);
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px 2px rgb(174, 173, 173);
+
+  /* margin-left: 30%; */
+  position: relative;
+  left: 40px;
+  top: 10px;
+  /* border: 1px solid black; */
+  font-family: "Brawler", serif;
+  font-size: 12px;
+}
+
+.image3 a {
+  position: relative;
+  left: 47px;
+}
+.image4 a {
+  position: relative;
+  left: 48px;
+}
+
+.gambar a:hover {
+  background-color: var(--primary-color);
+  color: black;
+  /* font-weight: bold; */
+  /* border: 2px solid black; */
+  box-shadow: 2px 2px 1px 2px rgb(73, 73, 73);
+  font-family: "Brawler", serif;
+  /* font-weight: bold; */
+  /* font-size: 11px; */
+  /* text-transform: uppercase; */
+  transition: 0.3s;
+}

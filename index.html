@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Brawler&family=Petemoss&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style_Land.css" />
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Portofolio-Landing-Page</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div id="nav-bar">
+      <nav>
+        <label class="nav-logo"><a href="index.html">AmandA</a></label>
+        <ul class="nav-list">
+          <li id="Home"><a href="#content">Home</a></li>
+          <li id="work"><a href="#page3">Work</a></li>
+          <li id="soc-med"><a href="#page4">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- CONTENT -->
+    <div id="content">
+      <div class="content-left">
+        <p class="text-content-thin1">Hi, I'm Yoga Mandala Widigda</p>
+        <p class="text-content-bold">
+          Ordinary Student & <br />
+          Frontend Dev Beginner
+        </p>
+        <hr />
+        <p class="text-content-thin2">
+          You will find projects regarding websites that I have created
+        </p>
+        <a class="button-content" href="More.html">More</a>
+      </div>
+      <!-- IMAGE -->
+      <div class="content-image">
+        <img width="15%" src="Gambar1.jpg" alt="" />
+      </div>
+    </div>
+    <div id="page2">
+      <div class="page2_judul">
+        <h3>Skill</h3>
+        <hr />
+      </div>
+      <div class="skill">
+        <img class="pict1" width="20%" src="html.png" alt="" />
+        <img class="pict2" width="20%" src="css.png" alt="" />
+        <img class="pict3" width="20%" src="py.png" alt="" />
+      </div>
+    </div>
+    <div id="page3">
+      <div class="judul">
+        <h2>My Portfolio</h2>
+        <hr />
+      </div>
+      <div id="porto">
+        <div class="content1">
+          <h2>Coding</h2>
+          <hr />
+          <div id="programmerSlideshow" class="slideshow-container">
+            <img class="slide" width="86%" src="program2.png" alt="" />
+            <img class="slide" width="86%" src="program1.png" alt="" />
+            <img class="slide" width="86%" src="program3.png" alt="" />
+            <img class="slide" width="86%" src="program4.png" alt="" />
+          </div>
+          <p><a href="coding.html">Show Project</a></p>
+        </div>
+        <div class="content2">
+          <h2>Design</h2>
+          <hr />
+          <div id="designerSlideshow" class="slideshow-container">
+            <img class="slide" width="70%" src="design3.png" alt="" />
+            <img class="slide" width="70%" src="design4.png" alt="" />
+            <img class="slide" width="70%" src="design5.png" alt="" />
+          </div>
+          <p><a href="design.html">Show Project</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- SOCIAL MEDIA -->
+    <div id="page4">
+      <div class="content-text">
+        <h2>Follow My Social Media</h2>
+        <hr />
+      </div>
+      <div id="content-img">
+        <div class="image1 gambar">
+          <img width="100%" src="gmail.png" alt="" />
+          <a
+            style="margin-left: 14px"
+            href="mailto:yogamandalaw@gmail.com"
+            target="_blank"
+            >Email</a
+          >
+        </div>
+        <div class="image2 gambar">
+          <img src="ig.png" alt="" />
+          <a href="#" target="_blank">Instagram</a>
+        </div>
+        <div class="image3 gambar">
+          <img src="linked.png" alt="" />
+          <a
+            href="https://www.linkedin.com/in/yoga-mandala-widigda-8a74ba20b/"
+            target="_blank"
+            >Linkedin</a
+          >
+        </div>
+        <div class="image4 gambar">
+          <img src="git.png" alt="" />
+          <a href="https://github.com/yogamandalskuy" target="_blank"
+            >Git-Hub</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function showSlides(slides, index) {
+          const currentSlides = slides[index];
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          currentSlides.style.display = "block";
+        }
+
+        const programmerSlides = document
+          .getElementById("programmerSlideshow")
+          .getElementsByClassName("slide");
+
+        const designerSlides = document
+          .getElementById("designerSlideshow")
+          .getElementsByClassName("slide");
+
+        let programmerIndex = 0;
+        let designerIndex = 0;
+
+        function startImageSlider() {
+          setInterval(function () {
+            showSlides(programmerSlides, programmerIndex);
+            showSlides(designerSlides, designerIndex);
+
+            programmerIndex = (programmerIndex + 1) % programmerSlides.length;
+            designerIndex = (designerIndex + 1) % designerSlides.length;
+          }, 2000);
+        }
+
+        startImageSlider();
+      });
+    </script>
+  </body>
+</html>

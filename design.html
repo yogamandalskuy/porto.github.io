@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Brawler&family=Petemoss&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style_design.css" />
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Work-Design</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div id="nav-bar">
+      <nav>
+        <label class="nav-logo"><a href="index.html">AmandA</a></label>
+        <ul class="nav-list">
+          <li id="Home"><a href="index.html">Home</a></li>
+          <li id="work"><a href="index.html#page3">Work</a></li>
+          <li id="soc-med">
+            <a href="index.html#page4">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- CONTENT -->
+    <div id="page2">
+      <div id="porto">
+        <div class="content1">
+          <h2>Design E-Library</h2>
+          <hr />
+          <div id="library" class="slideshow-container">
+            <img class="slide" width="75%" src="design3.png" alt="" />
+            <img class="slide" width="75%" src="design4.png" alt="" />
+            <img class="slide" width="75%" src="design2.png" alt="" />
+            <img class="slide" width="75%" src="design8.png" alt="" />
+          </div>
+          <p>
+            <a
+              href="https://www.figma.com/file/9pD2xVbRVvXyoBnwUTgugl/Design-Perpustakaan?type=design&node-id=0%3A1&mode=design&t=U2Gkq8pxztWZBhQO-1"
+              target="_blank"
+              >Go To Link</a
+            >
+          </p>
+        </div>
+        <div class="content2">
+          <h2>Design Portofolio Website</h2>
+          <hr />
+          <div id="porto-website" class="slideshow-container">
+            <img class="slide" width="90%" src="design7.png" alt="" />
+            <img class="slide" width="90%" src="design6.png" alt="" />
+            <img class="slide" width="90%" src="design10.png" alt="" />
+            <img class="slide" width="90%" src="design9.png" alt="" />
+            <!-- <img class="slide" width="80%" src="design7.png" alt="" /> -->
+          </div>
+          <p>
+            <a
+              href="https://www.figma.com/file/cpfc0F7E9HCCJGVPJenotE/Tugas-Design-Website?type=design&node-id=1%3A412&mode=design&t=U2Gkq8pxztWZBhQO-1"
+              target="_blank"
+              >Go To Link</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function showSlides(slides, index) {
+          const currentSlides = slides[index];
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          currentSlides.style.display = "block";
+        }
+
+        const programmerSlides = document
+          .getElementById("library")
+          .getElementsByClassName("slide");
+
+        const designerSlides = document
+          .getElementById("porto-website")
+          .getElementsByClassName("slide");
+
+        let programmerIndex = 0;
+        let designerIndex = 0;
+
+        function startImageSlider() {
+          setInterval(function () {
+            showSlides(programmerSlides, programmerIndex);
+            showSlides(designerSlides, designerIndex);
+
+            programmerIndex = (programmerIndex + 1) % programmerSlides.length;
+            designerIndex = (designerIndex + 1) % designerSlides.length;
+          }, 2000);
+        }
+
+        startImageSlider();
+      });
+    </script>
+  </body>
+</html>
